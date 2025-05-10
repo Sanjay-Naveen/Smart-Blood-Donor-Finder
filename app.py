@@ -147,23 +147,23 @@ if __name__ == "__main__":
 
 
 
+
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('login.html')  # or change to the main page like 'search.html'
-
-@app.route('/about')
-def about():
-    return render_template('aboutus.html')
+def login():
+    return render_template('login.html')  # Show login page
 
 @app.route('/search')
 def search():
-    return render_template('search.html')
+    return render_template('search.html')  # Show search page
 
-
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')  # Show about us page
 
 
 
